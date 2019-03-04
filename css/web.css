@@ -308,8 +308,11 @@ footer a:hover{
             right: -2px;
         }
     }
+    :root{
+        --nav_size: 250px;
+    }
     nav {
-        height: 180px;
+        height: var(--nav_size);
         position: relative;
         display: inline-block;
         top: -10px;
@@ -329,15 +332,21 @@ footer a:hover{
     }
     .short_nav p{
         text-align: center;
-        font-size: 30px;
+        font-size: 40px;
+        transition: 0.2s;
     }
     .fa-bars{
         font-size: 30px;
     }
     .short_nav li,.short_nav a{
-        color: rgb(24, 23, 23);
-        font-size: 14px;
-        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+        color: whitesmoke;
+        font-size: 15px;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        line-height: 30px;
+        
+    }
+    .short_nav li{
+        margin-left: -25px;
     }
     .dropdown_main span{
         display: inline;
@@ -346,22 +355,27 @@ footer a:hover{
         display: block;
         position: absolute;
         line-height: 27px;
-        right: -4px;
+        right: -5px;
         top: -20px;
-        width: 200px;
-        height: 180px;
-        background-color: white;
-        color: rgb(24, 23, 23);
-        border-radius: 10px;
+        width: 180px;
+        height: var(--nav_size);
+        background-color: transparent;
         animation-name: nav_box;
         animation-duration: 0.1s;
+        padding-top: 28px;
+        border-left: 5px ridge white;
+    }
+    .short_nav #dropdown:hover + p{
+        text-align: left;
+        font-size: 20px;
+        margin-left: 12px;
     }
     .short_nav ul{
         list-style-type: none;
         display: none;
     }
     
-    .short_nav a:hover{
+    .short_nav a:hover li{
         font-size: 17px;
     }
     .content_body{
